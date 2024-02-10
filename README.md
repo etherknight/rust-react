@@ -16,6 +16,12 @@ export PATH="$HOME/.moon/bin:$PATH"
 ```
 
 ## Run
+```
+# Run the app
+moon client:start 
 
+# Run the linter.
+moon client:lint
+```
 ## Build
 

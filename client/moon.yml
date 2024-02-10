@@ -1,0 +1,21 @@
+tasks:
+  build:
+    command:
+    - vite
+    - build
+    platform: node
+  lint:
+    command:
+    - oxlint
+    - -D
+    - all
+    - --fix
+    - src
+    platform: node
+  start:
+    command: vite
+    local: true
+    platform: node
+  test:
+    command: jest
+    platform: node
