@@ -1,5 +1,9 @@
 {
   "devDependencies": {
     "@moonrepo/cli": "^1.21.3"
+  },
+  "packageManager": "yarn@1.22.21",
+  "engines": {
+    "node": "21.6.1"
   }
 }

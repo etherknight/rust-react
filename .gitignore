@@ -27,3 +27,7 @@ yarn-error.log*
 # moon
 .moon/cache
 .moon/docker
+
+#server
+server/**/obj/*
+server/**/bin/*

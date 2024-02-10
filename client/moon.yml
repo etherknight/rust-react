@@ -1,20 +1,16 @@
+language: 'typescript'
+
 tasks:
   start:
     command: vite
     local: true
     platform: node  
   lint:
-    command:
-    - oxlint
-    - -D
-    - all   
-    - src
+    command: 'oxlint -D all src'
     platform: node 
   test:
     command: jest
     platform: node
   build:
-    command:
-    - vite
-    - build
+    command: 'vite build'
     platform: node

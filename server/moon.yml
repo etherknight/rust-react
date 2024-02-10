@@ -1,0 +1,13 @@
+language: 'dotnet'
+type: 'application'
+
+tasks:
+  start:
+    command: 'dotnet run Server.sln'
+    platform: system   
+  test:
+    command: 'dotnet test Server.sln'
+    platform: system
+  build:
+    command: 'dotnet publish Server.sln'
+    platform: system
