@@ -8,8 +8,7 @@ tasks:
     command:
     - oxlint
     - -D
-    - all
-    - --fix
+    - all   
     - src
     platform: node
   start:
