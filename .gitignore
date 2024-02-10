@@ -31,3 +31,7 @@ yarn-error.log*
 #server
 server/**/obj/*
 server/**/bin/*
+server/.vs
+
+#libs
+/libs/**/node_modules

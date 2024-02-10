@@ -1,13 +1,7 @@
 language: 'typescript'
-type: 'application'
-dependsOn: [
-  'react-components'
-]
+type: 'library'
+
 tasks:
-  start:
-    command: vite
-    local: true
-    platform: node  
   lint:
     command: 'oxlint -D all src'
     platform: node 
