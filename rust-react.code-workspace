@@ -4,5 +4,12 @@
 			"path": "."
 		}
 	],
-	"settings": {}
+	"settings": {},
+	"extensions": {
+		"recommendations": [
+			"esbenp.prettier-vscode",
+			"moonrepo.moon-console",
+			"oxc.oxc-vscode"
+		]
+	  }
 }
