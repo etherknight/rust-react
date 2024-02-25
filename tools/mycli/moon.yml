@@ -1,0 +1,16 @@
+language: "unknown"
+type: "tool"
+
+tasks:
+  build:
+    command: "dotnet build"
+    platform: system
+  clean:
+    command: "dotnet clean"
+    platform: system
+  release:
+    command: "dotnet pack -c Release"
+    platform: system
+    deps:
+      - '~:clean'
+      - '~:build'
