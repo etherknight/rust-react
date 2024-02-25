@@ -1,0 +1,10 @@
+language: 'typescript'
+type: 'library'
+
+tasks:
+  lint:
+    command: 'oxlint -D all src'
+    platform: node 
+  test:
+    command: jest
+    platform: node
