@@ -1,4 +1,4 @@
-language: 'dotnet'
+language: 'unknown'
 type: 'application'
 
 tasks:
