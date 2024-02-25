@@ -35,3 +35,9 @@ server/.vs
 
 #libs
 /libs/**/node_modules
+
+#tools
+/tools/Addins/*
+/tools/.store
+/tools/**/obj
+/tools/**/bin
