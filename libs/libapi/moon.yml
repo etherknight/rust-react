@@ -1,7 +1,16 @@
 language: 'typescript'
 type: 'library'
 
+project:
+  name: 'libapi'
+  description: 'Library of services for talking to the API'
+  
 tasks:
+  build:
+    command: 'npx swc src -s -d dist'
+    platform: node
+    deps:
+      - '~:lint'
   lint:
     command: 'oxlint -D all src'
     platform: node 
