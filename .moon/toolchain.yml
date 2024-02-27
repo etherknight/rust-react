@@ -17,3 +17,11 @@ node:
 
   # Support the "one version policy" by only declaring dependencies in the root `package.json`.
   # rootPackageOnly: true  
+
+#https://moonrepo.dev/docs/config/toolchain#typescript  
+typescript:
+  syncProjectReferences: true
+  syncProjectReferencesToPaths: true
+  createMissingConfig: true
+  includeProjectReferenceSources: true  
+  includeSharedTypes: true
