@@ -6,22 +6,53 @@
       "dom.iterable",
       "esnext"
     ],
-    "types": ["vite/client"],
-    "allowJs": true,
+    "types": [
+      "vite/client"
+    ],
+    "strictNullChecks": true,
+    "rootDir": ".",
+    "sourceMap": true,
+    "declaration": false,
+    "moduleResolution": "node",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "importHelpers": true,
     "skipLibCheck": true,
+    "skipDefaultLibCheck": true,
+    "resolveJsonModule": true,
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
+    "baseUrl": ".",
+    "noImplicitAny": false,
+    "useUnknownInCatchVariables": false,
+    "allowJs": true,
     "strict": true,
     "forceConsistentCasingInFileNames": true,
     "noFallthroughCasesInSwitch": true,
     "module": "esnext",
-    "moduleResolution": "node",
-    "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-    "jsx": "react-jsx"
+    "jsx": "react-jsx",
+    "paths": {
+      "libapi": [
+        "../libs/libapi/src/index.ts"
+      ],
+      "libapi/*": [
+        "../libs/libapi/src/*"
+      ]
+    }
   },
   "include": [
+    "../libs/libapi/**/*",
     "src"
+  ],
+  "references": [
+    {
+      "path": "../libs/libapi"
+    }
+  ],
+  "exclude": [
+    "node_modules",
+    "tmp"
   ]
 }

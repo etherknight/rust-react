@@ -1,7 +1,7 @@
 language: 'typescript'
 type: 'application'
 dependsOn: [
-  'react-components'
+  'libapi'
 ]
 tasks:
   start:
@@ -9,7 +9,7 @@ tasks:
     local: true
     platform: node  
   lint:
-    command: 'oxlint -D all src'
+    command: 'npx oxlint -D all src'
     platform: node 
   test:
     command: jest
