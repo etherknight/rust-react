@@ -13,9 +13,18 @@ namespace Server.Api
             {
                 options.SerializerOptions.TypeInfoResolverChain.Insert(0, AppJsonSerializerContext.Default);
             });
+
+            builder.Services.AddCors(options => {
+                options.AddDefaultPolicy(policy =>{
+                    policy.AllowAnyHeader()
+                          .AllowAnyOrigin()
+                          .AllowAnyMethod();
+                });
+            });
             
             var app = builder.Build();
-
+            app.UseCors();
+            
             var sampleTodos = new Todo[] {
                 new(1, "Walk the dog"),
                 new(2, "Do the dishes", DateOnly.FromDateTime(DateTime.Now)),
