@@ -11,8 +11,7 @@ export class TodoApi {
     public static async getTodoList(): Promise<TodoItem[]> {
         const options: RequestInit = {
             method: "GET",
-            mode: "cors",            
-            credentials: "same-origin", 
+            mode: "cors",                       
             headers: {
               "Content-Type": "application/json",              
             },
@@ -20,21 +19,15 @@ export class TodoApi {
             referrerPolicy: "no-referrer", 
           };
 
-        type Response = {
-            data?: {
-                todos: TodoItem[]
-            },
-            error?: {
-                message: string
-            }
+        try{
+            const response = await fetch("http://localhost:5287/todos", options);            
+            const result = await response.json();
+            if (response.ok){                   
+                return result as TodoItem[];
+            } 
+        } catch(error) {
+            console.error("getTodoList", error);
         }
-
-        const response = await fetch("http://localhost:5287/todos", options);
-        const {data, error} : Response = await response.json();
-        if (response.ok){            
-            return data.todos
-        } else {
-            throw error.message;
-        }          
+        return [];
     }        
 }   
